@@ -1,0 +1,118 @@
+{
+    "Dimensions": 2, 
+    "Potential": {
+        "Type": "WBE", 
+        "channels_coefficients": [
+            1.0, 
+            1.0
+        ], 
+        "channels_exponents": [
+            [
+                8.0, 
+                2.0
+            ], 
+            [
+                8.0, 
+                2.0
+            ]
+        ], 
+        "channels_shifts": [
+            [
+                0.0, 
+                -1.0
+            ], 
+            [
+                1.0, 
+                0.0
+            ]
+        ], 
+        "channels_sigmas": [
+            [
+                1.0, 
+                0.2
+            ], 
+            [
+                1.0, 
+                0.2
+            ]
+        ], 
+        "channels_versors": [
+            [
+                [
+                    1.0, 
+                    0.0
+                ], 
+                [
+                    0.0, 
+                    1.0
+                ]
+            ], 
+            [
+                [
+                    0.0, 
+                    1.0
+                ], 
+                [
+                    -1.0, 
+                    0.0
+                ]
+            ]
+        ], 
+        "gaussians_coefficients": [
+            1.0, 
+            1.0, 
+            1.0
+        ], 
+        "gaussians_shifts": [
+            [
+                -1.0, 
+                -1.0
+            ], 
+            [
+                1.0, 
+                -1.0
+            ], 
+            [
+                1.0, 
+                1.0
+            ]
+        ], 
+        "gaussians_sigmas": [
+            0.25, 
+            0.25, 
+            0.25
+        ], 
+        "points_coefficients": [
+            1.0, 
+            1.0, 
+            1.0
+        ], 
+        "points_shifts": [
+            [
+                -1.0, 
+                -1.0
+            ], 
+            [
+                1.0, 
+                -1.0
+            ], 
+            [
+                1.0, 
+                1.0
+            ]
+        ], 
+        "points_sigmas": [
+            0.2, 
+            0.2, 
+            0.2
+        ], 
+        "scaling": 5
+    }, 
+    "T": 10, 
+    "Thermostat": {
+        "tau": 2000
+    }, 
+    "steps": 15000000, 
+    "stride": 100, 
+    "time_step": 0.001
+}

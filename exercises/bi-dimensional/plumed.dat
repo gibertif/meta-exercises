@@ -1,0 +1,20 @@
+#
+UNITS NATURAL
+d1: DISTANCE ATOMS=1,2 COMPONENTS
+
+ff: MATHEVAL ARG=d1.x,d1.y VAR=x0,x1 PERIODIC=NO FUNC=2.5*(5.0*exp(-4.0*(x0-1.0)^2-4.0*(x1-1.0)^2)+5.0*exp(-4.0*(x0-1.0)^2-4.0*(x1+1.0)^2)+5.0*exp(-4.0*(x0+1.0)^2-4.0*(x1+1.0)^2)+5.0/(1.0/(25.0*(x0+1)^2+25.0*(x1+1)^2+1)+1.0/(25.0*(x0-1)^2+25.0*(x1+1)^2+1)+1.0/(25.0*(x0-1)^2+25.0*(x1-1)^2+1)+1.0/(1.0*x1^8.0+25.0*(1-x0)^2.0)+1.0/(1.0*x0^8.0+25.0*(x1+1)^2.0)))
+
+
+bb: BIASVALUE ARG=ff
+
+
+mt: METAD ...
+ARG=d1.x,d1.y
+HEIGHT=1.0 SIGMA=0.05,0.05 BIASFACTOR=15
+TEMP=1.0
+GRID_MIN=-1.8,-1.8 GRID_MAX=1.8,1.8 GRID_BIN=400,400
+PACE=500
+...
+
+PRINT ARG=d1.x,d1.y,mt.bias FILE=colvar STRIDE=500
+
