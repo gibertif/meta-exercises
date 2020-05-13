@@ -1,0 +1,11 @@
+# reduced units
+UNITS NATURAL
+# this line define the CV (s)
+d1: DISTANCE ATOMS=1,2 COMPONENTS
+# This lines are usually not present in a standard simulations. Here they represent the PES that we will sample
+# since is a toy model
+ff: MATHEVAL ARG=d1.x VAR=x0 PERIODIC=NO FUNC=x0^2*((1.05*x0-1)*(x0+1))*200
+bb: BIASVALUE ARG=ff
+
+# print the value of the CV to a file, as well as the bias of the Metadynamics
+PRINT ARG=d1.x FILE=colvar STRIDE=500

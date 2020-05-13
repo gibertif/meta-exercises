@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 points = 200
-x = np.linspace(-2,2,points)
+x = np.linspace(-2.2,2.2,points)
 
 print('#! FIELDS time d1.x d1.y')
 time = 0.0

@@ -21,7 +21,7 @@ pes_y = -np.log(prob_y/prob_y.sum())
 pes_x -= np.amin(pes_x)
 pes_y -= np.amin(pes_y)
 
-x = np.linspace(-2,2,200)
+x = np.linspace(-2.2,2.2,200)
 
 np.savetxt('reference_proj_x.dat',np.c_[x,pes_x])
 np.savetxt('reference_proj_y.dat',np.c_[x,pes_y])

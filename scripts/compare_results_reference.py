@@ -32,7 +32,7 @@ else:
     if args.reference:
         ref = np.loadtxt(args.reference)
         points = int(np.sqrt(len(ref)))
-        x = y = np.linspace(-2,2,points)
+        x = y = np.linspace(-2.2,2.2,points)
         plt.contour(x,y,ref.reshape(points,points).T,levs,colors='k')
 
     plt.show()
